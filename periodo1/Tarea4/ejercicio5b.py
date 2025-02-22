@@ -17,15 +17,16 @@ p2 = plot_implicit(Eq(y**3 - 5*y + x**2 - 4*x, 0), (x, -2, 6),
                    (y, -3, 3), line_color='darkorange',
                    title="y^3 - 5y + x^2 - 4x = 0",
                    fontsize='medium', show=False)
-p4 = plot_implicit(Eq(y**3 - 5*y + x**2 - 4*x, 6), (x, -2, 6),
+p3 = plot_implicit(Eq(y**3 - 5*y + x**2 - 4*x, 6), (x, -2, 6),
                    (y, -3, 3), line_color='crimson',
                    title="Gráficas de la solución y^3 - 5y + x^2 - 4x = 6",
                    fontsize='medium', show=False)
-p7 = plot_implicit(Eq(y**3 - 5*y + x**2 - 4*x, -6), (x, -2, 6),
+p4 = plot_implicit(Eq(y**3 - 5*y + x**2 - 4*x, -6), (x, -2, 6),
                    (y, -3, 3), line_color='darkgoldenrod',
                    title="Gráficas de la solución y^3 - 5y + x^2 - 4x = c",
                    fontsize='medium', show=False)
-p7.append(p2[0])
-p7.append(p4[0])
-p7.show()
+p4.append(p1[0])
+p4.append(p2[0])
+p4.append(p3[0])
+p4.show()
 
