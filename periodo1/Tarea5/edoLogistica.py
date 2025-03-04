@@ -37,13 +37,12 @@ def edo_autonoma(fy,yx,x_val,y_val,step,c_val,sol_eq):
     for sol in sol_eq:
       plt.axhline(y=sol, linestyle='--')
     plt.quiver(X, Y, dx, dy, color='black', headlength=3)
-    plt.title("Direction Field and Solution Curves")
+    plt.title("Campo Direccional y Curvas Solucion")
     plt.xlim(x_val[0],x_val[1])
     plt.ylim(y_val[0],y_val[1])
     plt.xlabel('x')
     plt.ylabel('y')
     plt.legend(loc='best')
-    plt.grid(True)
     plt.show()
 
 def f(y):
@@ -57,7 +56,7 @@ def y(x,c):
 x_val=[-5,5]
 y_val=[-5,5]
 step=30
-c_val=[-2,-1,0.5,1,2]
-sol_eq=[0,1]
+c_val=[-2,-1,1,2]
+sol_eq=[0,2]
 
 edo_autonoma(f,y,x_val,y_val,step,c_val,sol_eq)
